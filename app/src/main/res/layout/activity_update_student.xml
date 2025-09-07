@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_marginTop="50dp"
+    android:layout_height="match_parent"
+    tools:context=".UpdateStudentActivity">
+
+    <EditText
+        android:id="@+id/etUpdRoll"
+        android:hint="Enter Student ID"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etUpdName"
+        android:hint="Enter New Name"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnUpdateStudent"
+        android:text="Update Student"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content" />
+</LinearLayout>

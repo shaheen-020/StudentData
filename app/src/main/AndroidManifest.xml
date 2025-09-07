@@ -13,23 +13,19 @@
         android:theme="@style/Theme.StudentData"
         tools:targetApi="31">
         <activity
-            android:name=".LoginActivity"
-            android:exported="false">
-        </activity>
-        <activity
             android:name=".SignUpActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="false">
-
-        </activity>
+        <activity android:name=".LoginActivity" android:exported="true"/>
+        <activity android:name=".MainActivity" android:exported="true"/>
+        <activity android:name=".AddStudentActivity"/>
+        <activity android:name=".ViewStudentsActivity"/>
+        <activity android:name=".UpdateStudentActivity"/>
+        <activity android:name=".StudentRecordsActivity"/>
     </application>
 
 </manifest>

@@ -50,8 +50,11 @@ public class SignUpActivity extends AppCompatActivity {
                 auth.createUserWithEmailAndPassword(user, pass)
                         .addOnCompleteListener(task -> {
                             if (task.isSuccessful()) {
-                                Toast.makeText(SignUpActivity.this, "Sign Up successfully", Toast.LENGTH_SHORT).show();
-                                // You can redirect to login or main activity here
+                                Toast.makeText(SignUpActivity.this, "Sign Up successful. Please log in.", Toast.LENGTH_SHORT).show();
+                                // Sign out the user immediately after sign up
+                                auth.signOut();
+                                startActivity(new Intent(SignUpActivity.this, LoginActivity.class));
+                                finish();
                             } else {
                                 Toast.makeText(SignUpActivity.this, "Signup failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             }
