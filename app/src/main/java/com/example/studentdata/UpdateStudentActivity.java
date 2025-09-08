@@ -27,7 +27,7 @@ public class UpdateStudentActivity extends AppCompatActivity {
                 Toast.makeText(this, "Enter ID and new name", Toast.LENGTH_SHORT).show();
             } else {
                 boolean ok = db.updateStudent(roll, newName);
-                Toast.makeText(this, ok ? "Updated" : "Student not found", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, ok ? "Updated successfully." : "Student not found", Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -26,11 +26,11 @@ public class LoginActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
 
         // ✅ Auto-login if already authenticated
-        if (auth.getCurrentUser() != null) {
+        /*if (auth.getCurrentUser() != null) {
             startActivity(new Intent(LoginActivity.this, MainActivity.class));
             finish();
             return;
-        }
+        }*/
 
         setContentView(R.layout.activity_login);
 
@@ -49,7 +49,7 @@ public class LoginActivity extends AppCompatActivity {
                     if (!pass.isEmpty()) {
                         auth.signInWithEmailAndPassword(email, pass)
                                 .addOnSuccessListener(authResult -> {
-                                    Toast.makeText(LoginActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(LoginActivity.this, "Login successfully.", Toast.LENGTH_SHORT).show();
                                     // ✅ Redirect to MainActivity
                                     startActivity(new Intent(LoginActivity.this, MainActivity.class));
                                     finish();

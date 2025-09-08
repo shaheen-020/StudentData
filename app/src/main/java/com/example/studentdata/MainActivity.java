@@ -3,6 +3,7 @@ package com.example.studentdata;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         // ✅ Logout
         btnLogout.setOnClickListener(v -> {
             FirebaseAuth.getInstance().signOut();
+            Toast.makeText(MainActivity.this, "Logout successfully.", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(this, LoginActivity.class));
             finish();
         });
